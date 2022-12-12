@@ -1,24 +1,20 @@
 <?php
 
 $pagesData = [
-    'page1' => [
-        'id' => 'about',
-        'url' => './pages/about.php',
+    'about' => [
+        'name' => 'About',
         'content' => ''
     ],
-    'page2' => [
-        'id' => 'blog',
-        'url' => './pages/blog.php',
+    'blog' => [
+        'name' => 'Blog',
         'content' => ''
     ],
-    'page3' => [
-        'id' => 'portfolio',
-        'url' => './pages/portfolio.php',
+    'portfolio' => [
+        'name' => 'Portfolio',
         'content' => ''
     ],
-    'page4' => [
-        'id' => 'contact',
-        'url' => './pages/contact.php',
+    'contact' => [
+        'name' => 'Contact',
         'content' => ''
     ],
 ];

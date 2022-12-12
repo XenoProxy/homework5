@@ -1,11 +1,17 @@
 <?php require_once './pagesData.php'; ?>
 
-<nav class="nav">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="./pages/about.php">About</a></li>
-        <li><a href="./pages/blog.php">Services</a></li>
-        <li><a href="./pages/portfolio.php">Catalog</a></li>
-        <li><a href="./pages/contact.php">Contacts</a></li>
-    </ul>
-</nav>
+<div class="main">
+
+    <?php if(empty($_GET['pid'])): ?>
+    <nav class="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <?php if (!empty($pagesData)): ?>
+            <?php foreach($pagesData as $id => $page): ?>
+            <li><a href="/navigation.php?pid=<?php echo $id; ?>"><?php $page['name']; ?></a></li>
+            <?php endforeach;
+            endif; ?>
+        </ul>
+    </nav>   
+    <?php else: require_once './page.php'; endif; ?>
+</div>

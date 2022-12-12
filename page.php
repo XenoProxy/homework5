@@ -1,12 +1,13 @@
-<?php
-require_once './header.php';
-require_once './nav.php';
-require_once './pagesData.php';
-require_once './footer.php';
-?>
+<?php if(!empty($_GET['pid']) && !empty($pagesData)):
+$page = $pagesData[$_GET['pid']]; ?>
 
-<div class="main">
-    <h1><?php echo $product['image']; ?></h1>
+<h1><?php echo $page['name']; ?></h1>
+<div class="content"><?php echo $page['content']; ?></div>
 
+<?php if($page == 'contact'):
 
-</div>
+// форма
+
+endif; ?>
+
+<?php endif; ?>
