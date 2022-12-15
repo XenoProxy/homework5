@@ -8,7 +8,7 @@
             <li><a href="/">Home</a></li>
             <?php if (!empty($pagesData)): ?>
             <?php foreach($pagesData as $id => $page): ?>
-            <li><a href="/navigation.php?pid=<?php echo $id; ?>"><?php $page['name']; ?></a></li>
+            <li><a href="/navigation.php?pid=<?php echo $id; ?>"><?php echo $page['name']; ?></a></li>
             <?php endforeach;
             endif; ?>
         </ul>
